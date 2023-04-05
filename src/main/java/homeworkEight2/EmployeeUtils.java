@@ -22,7 +22,7 @@ public class EmployeeUtils {
         return -1;
     }
 
-    public int findBySubName(String subName, Employee [] arr){
+    public static int findBySubName(String subName, Employee [] arr){
         for(int i = 0; i < arr.length; i++){
             if(arr[i].getName().contains(subName)){
                 return i;
@@ -36,7 +36,7 @@ public class EmployeeUtils {
 // This was done because Employee didn't have the method required and
 // because we (at that moment) didn't know about 'super' yet.
 
-    public int salarySum(Worker [] arr){
+    public static int salarySum(Worker [] arr){
         int result = 0;
         for(int i = 0; i < arr.length; i++){
             result += arr[i].getSalaryWorker();
@@ -48,7 +48,7 @@ public class EmployeeUtils {
 // a code for minSalary, minNumberOfEmployees, maxNumberOfEmployees, maxIncrement, minIncrement
 // so don't look for the code for those here please ;)
 
-    public int findMaxSalary(Worker [] arr){
+    public static int findMaxSalary(Worker [] arr){
         int max = Integer.MIN_VALUE;
         for(int i = 0; i < arr.length; i++){
             if (max < arr[i].getSalaryWorker()){
@@ -116,5 +116,9 @@ public class EmployeeUtils {
         }
         return sum;
     }
+
+
+
 }
+
 
